@@ -28,6 +28,16 @@ Computes the exact revenue generation per product category per country, utilizin
 * **Script:** [3_market_share_intelligence.sql](3_market_share_intelligence.sql)
 
 ---
+## ⚙️ Automated ETL Pipeline & Data Quality Engineering (Python)
+
+To mature the analytical models from ad-hoc SQL queries into a scalable asset, I developed a production-ready Python ETL pipeline utilizing **Pandas** and **SQLAlchemy**.
+
+* **Robust Anomaly Mitigation:** Instead of a fragile historical mean, the Python pipeline implements a dynamic **Median-based Outlier Threshold ($2.5 \times \text{Median}$)** grouped by country. This guarantees long-term adaptability against global freight price drift or market inflation.
+* **Database Persistence & Restructuring:** The pipeline automates data extraction, transformation, and load (`.to_sql`) routines back into the database, instantly creating a clean, analytics-ready layer (`fact_bunker_clean`) for downstream BI dashboarding.
+* **Automated Scripts:**
+  * `pipeline.py`: Code containing the full maritime core logic from database connection to outlier handling.
+  * `check_database.py`: A dedicated verification script ensuring zero data leakage and strict database structural constraints before runtime.
+---
 
 ## 📈 Strategic Business Insights
 * **High-Priority Trade Corridor:** The *Beverages* sector heavily dominates the German market, contributing over 35-40% of the calculated regional import value. Supply chain stability to major German ports must be heavily prioritized.
