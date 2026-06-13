@@ -37,6 +37,8 @@ To mature the analytical models from ad-hoc SQL queries into a scalable asset, I
 * **Automated Scripts:**
   * `pipeline.py`: Code containing the full maritime core logic from database connection to outlier handling.
   * `check_database.py`: A dedicated verification script ensuring zero data leakage and strict database structural constraints before runtime.
+
+"Database source: Local SQLite Northwind database (>25MB)"
 ---
 
 ## 📈 Strategic Business Insights
